@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>My Portfolio</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <header>
-        <h1>Contact Me</h1>
+        <h1 onclick="backToPage()" id="contact">Contact Me</h1>
     </header>
     <main>
     <div class="contactme">
         <div class="contact-left">
-            <p><a href="#"><i class='bx bxl-telegram'>@keradyon27</i></a></p>
+            <p><a href="https://t.me/keradyon27"><i class='bx bxl-telegram'>@keradyon27</i></a></p>
             <p><a href="#"><i class='bx bxs-phone'></i>0910981089</a> </p>
           <div class="social-icons">
-            <a href="#"><i class='bx bxl-telegram'></i></a>
-            <a href="#"><i class='bx bxl-github' ></i></a>
-            <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+            <a href="https://t.me/keradyon27" aria-label="contact me on telegram"><i class='bx bxl-telegram'></i></a>
+            <a href="https://github.com/NuhaminBaye" aria-label="contact me on github"><i class='bx bxl-github' ></i></a>
+            <a href="https://www.linkedin.com/in/nuhamin-baye-884633293/" aria-label="contact me on linkedin"><i class='bx bxl-linkedin-square' ></i></a>
+            <a href="https://web.facebook.com/profile.php?id=100090623004563" aria-label="contact me on facebook"><i class='bx bxl-facebook-circle'></i></a>
           </div>
-        <button>Download CV</button>
+          <button id="download-cv"><a href="My CV\My CV (7).pdf"class="download-button" download>Download CV</a></button>
         </div>
         <div class="contact-right">
             <form>
-                <input type="text" name="Name" placeholder="Your Name" required><br>
-                <input type="email" name="email" placeholder="Your Email" required><br>
-                <textarea name="message" rows="6" placeholder="Your Message"></textarea><br>
-                <input type="submit" value="Submit">  
+                <input type="text" name="Name" aria-label="Your Name" placeholder="Your Name" required><br>
+                <input type="email" name="email" aria-label="Your Email" placeholder="Your Email" required><br>
+                <textarea name="message" rows="6"  aria-label="Your Message" placeholder="Your Message"></textarea><br>
+                 <button type="submit">Submit</button>  
             </form>
         </div>
     </div>
@@ -35,5 +37,6 @@
     <footer>
         <p>&copy; Copyright@Nuhamin Baye</p>
     </footer>
+<script src="script.js"></script>
 </body>
 </html>

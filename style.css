@@ -1,0 +1,910 @@
+*{
+    padding:0;
+    margin: 0;
+}
+body{
+    background-color: rgb(207, 190, 232);
+    color: white;
+    font-family: Roboto;
+}
+html {
+    scroll-behavior: smooth;
+}
+.header1{
+    padding: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    font-size:48px ;
+    color:rgb(70,0,169);
+}
+a.active,a:hover{
+     color: rgb(70,0,169);
+     transition:0.5s;
+}
+nav ul li a{
+    color:black;
+    padding:10px;
+    font-size: 30px;
+    text-decoration: none;
+}
+nav ul {
+    display:flex;
+    flex-direction: right;
+    list-style-type: none;
+}
+nav li{
+    margin-left: 20px;
+}
+.menu-icon i{
+    color:#fff;
+    font-size: 30px;
+    display:none;
+}
+main{
+    color:black;
+    display:grid;
+    padding: 50px;
+    grid-template-rows: 100px 300px 0px;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas: 
+    'header header'
+    'main aside'
+    'footer footer';
+}
+.picture img{
+
+    width:700px;
+    transition: 0.6s;
+}
+.picture img:hover{
+    opacity:0.8;
+}
+.item-1{ 
+    grid-area: header;
+}
+.item-2{
+    grid-area:main;
+}
+.item3{
+    grid-area:aside;
+}
+.item4{
+    grid-area: footer;
+}
+.Home{
+    margin-left:120px;
+}
+h1{
+    font-size: 48px;
+    font-family: Roboto;
+}
+.btn{
+    margin-top: 150px;
+    margin-left: 70px;
+    display: flex;
+    gap: 40px;
+}
+h3{
+    font-size:38px;
+    margin: 30px 0;
+}
+button{
+    background-color: rgb(70,0,169);
+    color:white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.Home button{
+    cursor: pointer;
+}
+.icons{
+    margin-left: 70px;
+    font-size: 30px;
+    padding-top: 30px;
+}
+/* ---------------------------------------------homemobile--------------------------------------------------  */
+@media only screen and (max-width:768px){
+/* Mobile Styles */
+nav ul {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+nav ul li {
+    margin: 0; /* Remove margin for vertical layout */
+}
+.menu-icon i {
+    display: block; /* Show menu icon on mobile */
+}
+nav ul.show {
+    max-height: 300px; /* Adjust as needed */
+}
+
+main {
+color: black;
+display: grid;
+padding: 50px;
+grid-template-rows: 100px 300px 0px;
+grid-template-columns: 3fr 2fr;
+grid-template-areas: 
+'header header'
+'main aside'
+'footer footer';
+}
+
+    .picture img {
+        width: 80%; /* Full width on mobile */
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .btn {
+        margin-top: 50px;
+        margin-left: 0;
+        flex-direction: row; /* Stack buttons */
+        gap: 20px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    .icons {
+        margin-left: 0;
+        font-size: 24px;
+    }
+
+}
+/* Landscape Orientation */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    
+    .header1 {
+        padding: 20px;
+    }
+
+    main {
+        padding: 30px;
+        grid-template-columns: 1fr 1fr; /* Two column layout */
+    }
+
+    .btn {
+        flex-direction: row; /* Align buttons in a row */
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    nav ul {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    nav ul li {
+        margin: 0; /* Remove margin for vertical layout */
+    }
+    .menu-icon i {
+        display: block; /* Show menu icon on mobile */
+    }
+    nav ul.show {
+        max-height: 300px; /* Adjust as needed */
+    }
+    
+    main {
+    color: black;
+    display: grid;
+    padding: 50px;
+    grid-template-rows: 100px 300px 0px;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas: 
+    'header header'
+    'main aside'
+    'footer footer';
+    }
+    
+        .picture img {
+            width: 80%; /* Full width on mobile */}
+}
+/* -------------------------------------about------------------------------------------------------*/
+.Aboutpage{
+    color:black;
+    display:grid;
+    padding: 50px;
+    grid-template-rows: 100px 300px 10px;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: 
+    'header header'
+    'main aside'
+    'footer footer';
+}
+#sub-title{
+    color:rgb(70,0,169);
+    margin-bottom: 20px;
+    
+}
+.tab-titles p{
+    color:white;
+}
+.tab-titles{
+    display:flex;
+    margin:20px 0 40px;
+}
+.tab-links{
+    margin-right:50px;
+    font-size:18px;
+    font-weight:600;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(70,0,169);
+    padding: 10px;
+    border-radius: 5px;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:rgb(70,0,169);
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width:50%;
+}
+.tab-contents ul li{
+    list-style:none;
+    margin:10px 0;
+}
+.tab-contents ul li span{
+    color:rgb(70,0,169);
+    font-size: 20px;
+}
+.tab-contents{
+    display:none;
+}
+.tab-contents.active-tab{
+   display:block; 
+}
+.myimage img{
+    width: 400px;
+}
+.container{
+    margin-top: 50px;
+    width: auto;
+    height:auto;
+    margin:60px auto;
+    color: #fff;
+    padding:20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
+    background-color: rgb(231, 231, 243);
+}
+
+.sub-title{
+    padding: 30px;
+}
+.skills {
+    width: 100%;
+    border-collapse: collapse; 
+}
+.progress-bar{
+    background: #959595;
+    width: 600px;
+    height: 20px;
+    border-radius: 5px;
+}
+.container td{
+    list-style-type: none;
+    margin:20px 0;
+    padding:10px;
+    color:black;
+}
+.container th{
+    background-color:rgb(70,0,169);
+}
+.skills th, .skills td {
+    box-sizing: content-box;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid black;
+} 
+.progress-bar div span{
+    display:flex;
+    justify-content: right;
+    color:white;
+} 
+@keyframes fill {
+    from {
+        width: 0;
+    }
+    to {
+        width: inherit; /* Uses the width set in individual classes */
+    }
+}
+
+.html {
+    width: 94%; /* Skill percentage */
+    background-color:  rgb(98,0,217); /* Red for HTML */
+    animation: html 3s;
+}
+
+.CSS {
+    width: 90%; /* Skill percentage */
+    background-color: rgb(98,0,217); /* Blue for CSS */
+    animation: CSS 3s;
+}
+
+.JavaScript {
+    width: 86%; /* Skill percentage */
+    background-color: rgb(98,0,217);
+    animation:JavaScript   3s;
+}
+/* ------------------------------------------------Aboutmobile------------------------------------- */
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    .Aboutpage {
+        padding: 20px;
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: auto; /* Adjust rows to auto */
+        grid-template-areas: 
+            'header'
+            'main'
+            'aside'
+            'footer';
+    }
+
+    #sub-title {
+        margin-bottom: 10px;
+    }
+
+    .tab-titles {
+        flex-direction: row; /* Stack tab titles horizontally */
+        margin: 15px 0 25px; /* Adjust margins */
+      
+    }
+
+    .tab-links {
+        margin-right: 0; /* Remove right margin */
+        font-size: 16px; /* Slightly smaller font size */
+        padding: 5px; /* Adjust padding */
+    }
+
+    .tab-contents ul li span {
+        font-size: 18px; /* Reduce font size for mobile */
+    }
+
+    .myimage img {
+        width: 100%; /* Responsive image */
+    }
+
+    .container {
+        margin: 20px auto; /* Reduce margin */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .sub-title {
+        padding: 15px; /* Reduce padding */
+    }
+
+    .progress-bar {
+        width: 100%; /* Full width progress bar */
+    }
+
+    .container td, .container th {
+        padding: 8px; /* Adjust padding for cells */
+    }
+
+    .skills th, .skills td {
+        padding: 8px; /* Reduce padding */
+    }
+}
+
+/* Landscape Orientation */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    .Aboutpage {
+        padding: 30px;
+        grid-template-columns: 1fr 1fr; /* Two columns layout */
+    }
+
+    .tab-titles {
+        margin: 15px 0 25px; /* Adjust margins */
+
+    }
+
+    .tab-links {
+        margin-right: 20px;
+        padding:10px; /* Space between tab links */
+        gap:20px;
+    }
+}
+/* --------------------------------------------------------------------------abouttablet------------------------------------------------------ */
+/* Tablet Styles */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .Aboutpage {
+        padding: 30px;
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: auto; /* Adjust rows to auto */
+        grid-template-areas: 
+            'header'
+            'main'
+            'aside'
+            'footer';
+    }
+
+    #sub-title {
+        margin-bottom: 10px;
+    }
+
+    .tab-titles {
+        flex-direction:row; /* Stack tab titles Horizontally */
+        margin: 10px 0 20px;
+    }
+
+    .tab-links {
+        margin-right: 20px; /* Reduce right margin */
+        font-size: 16px; /* Slightly smaller font size */
+        padding: 8px; /* Adjust padding */
+    }
+
+    .tab-contents ul li span {
+        font-size: 18px; /* Reduce font size for mobile */
+    }
+
+    .myimage img {
+        width: 100%; /* Responsive image */
+    }
+
+    .container {
+        margin: 20px auto; /* Reduce margin */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .sub-title {
+        padding: 20px; /* Reduce padding */
+    }
+
+    .progress-bar {
+        width: 100%; /* Full width progress bar */
+    }
+
+    .container td, .container th {
+        padding: 8px; /* Adjust padding for cells */
+    }
+
+    .skills th, .skills td {
+        padding: 8px; /* Reduce padding */
+    }
+}
+
+/* Landscape Orientation */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .Aboutpage {
+        padding: 40px;
+        grid-template-columns: 1fr 1fr; /* Two columns layout */
+    }
+
+    .tab-titles {
+        margin: 15px 0 25px; /* Adjust margins */
+    }
+
+    .tab-links {
+        margin-right: 30px; /* Space between tab links */
+    }
+}
+
+/* --------------------------------Services--------------------------------------------------- */
+.allservices {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 70px;
+    justify-content: center;
+    height: auto;
+    margin: 40px 80px;
+}
+
+.services {
+    border: solid rgb(217, 194, 238);
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: black;
+    background-color: rgb(232, 220, 244);
+    margin: 30px;
+    flex: 1 1 300px; /* Allow growth and set a base width */
+    min-height: 300px; /* Set a minimum height for uniformity */
+}
+
+#sub-title2 {
+    margin-left: 95px;
+    color: rgb(70, 0, 169);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.services h2 {
+    color: rgb(70, 0, 169);
+}
+
+.services p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: large;
+}
+
+.services i {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) { /* Mobile Portrait */
+    .allservices {
+        flex-direction: column; /* Stack in one column */
+    }
+    .services {
+        flex: 1 1 100%;
+        max-width: 400px; 
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) { 
+    .allservices {
+        flex-direction: row; 
+    }
+    .services {
+        flex: 1 1 calc(50% - 60px); 
+    }
+}
+
+/* -----------------------------------------portfolio----------------------------- */
+#myworks{
+    display:flex;
+    gap: 50px;
+    padding:60px 40px;
+}
+#Portfolio{
+     padding:60px;
+     color:rgb(70,0,169); 
+    
+}
+audio{
+    margin-left: 50px;
+}
+.portfoliobutton{
+    margin-left: 840px;
+}
+.myvideos {
+    flex: 1 1 calc(33% - 20px); /* 3 videos per row */
+    max-width: calc(33% - 20px); /* Limit max width */
+}
+video {
+    width: 100%; /* Make video responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+/* --------------------------------------------------portfoliomobile------------------------------------ */
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    #myworks {
+        flex-direction: column; /* Stack items vertically */
+        gap: 20px; /* Reduced gap */
+        padding: 20px; 
+    }
+
+    #Portfolio {
+        padding: 20px; /* Reduce padding */
+        color:rgb(70,0,169); /* Maintain color */
+        font-size: 20px; /* Adjust font size */
+    }
+
+    audio {
+        margin-left: 0; 
+        width: 50%; 
+    }
+
+    .portfoliobutton {
+        margin-left: 0;
+        text-align: center;
+        display: block; 
+        margin-top: 20px; 
+    }
+}
+
+/* Landscape Orientation */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    #myworks {
+        flex-direction: row;
+        gap: 30px; /* Adjust gap */
+        padding: 40px; /* Reduce padding */
+    }
+    .myvideos {
+        flex: 1 1 calc(33% - 20px); /* 3 videos per row */
+        max-width: calc(33% - 20px); /* Limit max width */
+    }
+    video {
+        width: 100%; /* Make video responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+    audio {
+        margin-left: 0; /* Remove left margin for audio */
+        width: 50%; /* Full width for audio */
+        margin-bottom: 20px; /* Add spacing below audio */
+    }
+    #myworks {
+        padding: 30px; /* Maintain padding */
+        gap: 30px; /* Slightly larger gap */
+    }
+
+    #Portfolio {
+        padding: 30px; /* Adjust padding */
+    }
+
+    .portfoliobutton {
+        margin-left: 0; /* Ensure no left margin */
+    }
+}
+/* ----------------------------------------------------portfoliotablet----------------------------- */
+/* Tablet Styles */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #myworks {
+        flex-direction: row;
+        flex-wrap: wrap; /* Stack items vertically in portrait */
+        gap: 30px; /* Adjust gap */
+        padding: 40px; /* Reduce padding */
+    }
+    .myvideos {
+        flex: 1 1 calc(33% - 20px); /* 3 videos per row */
+        max-width: calc(33% - 20px); /* Limit max width */
+    }
+    video {
+        width: 100%; /* Make video responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    #Portfolio {
+        padding: 30px; /* Adjust padding */
+        font-size: 24px; /* Adjust font size */
+    }
+
+    audio {
+        margin-left: 0; /* Remove left margin for audio */
+        width: 50%; /* Full width for audio */
+        margin-bottom: 20px; /* Add spacing below audio */
+    }
+    .portfoliobutton {
+        margin-left: 0; 
+        text-align: center; /* Center button text */
+        display: block; /* Display as block for full width */
+        margin-top: 20px; /* Add margin for spacing */
+    }
+}
+
+/* Landscape Orientation */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #myworks {
+        flex-direction: row; /* Maintain horizontal layout */
+        gap: 40px; /* Adjust gap */
+        padding: 50px; /* Maintain padding */
+    }
+
+    #Portfolio {
+        padding: 40px; /* Adjust padding */
+    }
+
+    .portfoliobutton {
+        margin-left: 0; /* Ensure no left margin */
+    }
+}
+/* --------------------------------------------contact----------------------------------- */
+.contactme{
+    display: flex;
+    justify-content: center;
+    gap:200px;
+}
+.contact-right form {
+    width:700px;
+ /* Optional: limits the form width */
+    margin: auto; /* Center the form */
+}
+#download-cv  a{
+   color:white;
+   text-decoration: none;
+}
+.contact-right input[type="text"],
+.contact-right input[type="email"],
+.contact-right textarea {
+    width: 100%; /* Full width */
+    height: 40px; /* Increase height */
+    font-size: 18px; /* Larger font size */
+    padding: 10px; /* Add padding for comfort */
+    margin-bottom: 15px; /* Space between elements */
+}
+.contact-left button{
+    margin-left: 40px;
+}
+.contact-right textarea {
+    height: 200px; /* Increase height for textarea */
+}
+
+.contact-right button {
+    padding: 10px 15px; /* Increase button size */
+    font-size: 18px; /* Larger font size */
+    cursor: pointer; /* Change cursor on hover */
+}
+.contact-left{
+    font-size: xx-large;
+    padding: 20px;
+}
+.contact-left p{
+    padding: 20px;
+}
+.social-icons{
+    padding: 20px;
+}
+#contact{
+      margin-left:100px ;
+      margin-top: 50px;
+      color: rgb(70,0,169);
+}
+footer{
+    background-color: rgb(70,0,169);
+    padding: 20px;
+    text-align: center;
+    margin-top: 160px;
+}
+/* ---------------------------------------------------contactmobile---------------------------------------- */
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    .contactme {
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center;
+        gap: 20px; /* Reduce gap */
+    }
+
+    .contact-right form {
+        width: 90%; /* Responsive width */
+        margin: auto; /* Center the form */
+    }
+
+    .contact-right input[type="text"],
+    .contact-right input[type="email"],
+    .contact-right textarea {
+        font-size: 16px; /* Adjust font size */
+        height: 35px; /* Adjust height */
+        padding: 8px; /* Adjust padding */
+    }
+
+    .contact-left button {
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center button text */
+    }
+
+    .contact-right textarea {
+        height: 150px; /* Adjust height for textarea */
+    }
+
+    .contact-right button {
+        padding: 8px 12px; /* Adjust button padding */
+        font-size: 16px; /* Adjust button font size */
+    }
+
+    .contact-left {
+        font-size: large; /* Reduce font size */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .contact-left p {
+        padding: 10px; /* Adjust padding */
+    }
+
+    .social-icons {
+        padding: 15px; /* Adjust padding */
+    }
+
+    #contact {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 30px; /* Adjust top margin */
+        color: rgb(70,0,169); /* Maintain color */
+        text-align: center; /* Center text */
+    }
+}
+
+/* Landscape Orientation */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    .contactme {
+        flex-direction: row; /* Maintain horizontal layout */
+        gap: 40px; /* Adjust gap */
+        padding: 10px; /* Add padding */
+    }
+
+    .contact-right form {
+        width: 80%; /* Maintain form width */
+    }
+
+    #contact {
+        margin-left: 10px; /* Adjust left margin */
+        margin-top: 20px; /* Adjust top margin */
+    }
+}
+/* ------------------------------------------------contacttablet------------------------------------ */
+/* Tablet Styles */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .contactme {
+        flex-direction: column; /* Stack elements vertically in portrait */
+        justify-content: center;
+        gap: 40px; /* Reduce gap */
+    }
+
+    .contact-right form {
+        width: 90%; /* Responsive width */
+        margin: auto; /* Center the form */
+    }
+
+    .contact-right input[type="text"],
+    .contact-right input[type="email"],
+    .contact-right textarea {
+        font-size: 16px; /* Slightly smaller font size */
+        padding: 8px; /* Adjust padding */
+    }
+
+    .contact-left button {
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center button text */
+    }
+
+    .contact-right textarea {
+        height: 150px; /* Adjust height for textarea */
+    }
+
+    .contact-right button {
+        padding: 8px 12px; /* Adjust button padding */
+        font-size: 16px; /* Adjust button font size */
+    }
+
+    .contact-left {
+        font-size: large; /* Reduce font size */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .contact-left p {
+        padding: 15px; /* Adjust padding */
+    }
+
+    .social-icons {
+        padding: 15px; /* Adjust padding */
+    }
+
+    #contact {
+        margin-left: 20px; /* Reduce left margin */
+        margin-top: 30px; /* Reduce top margin */
+    }
+}
+
+/* Landscape Orientation */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .contactme {
+        flex-direction: row; /* Maintain horizontal layout */
+        gap: 100px; /* Adjust gap */
+        padding: 20px; /* Add padding */
+    }
+
+    .contact-right form {
+        width: 60%; /* Maintain form width */
+    }
+
+    #contact {
+        margin-left: 50px; /* Adjust left margin */
+        margin-top: 30px; /* Adjust top margin */
+    }
+}
+/* ================================= */
+   
+    

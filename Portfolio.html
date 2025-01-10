@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <header>
-        <h1>My Work</h1>
+        <h1 onclick="backToPage()"id="Portfolio">My Work</h1>
     </header>
     <audio controls>
         <source src="audio/Audio1.mp3"
         type="audio/mp3">
     </audio>
    <div id="myworks">
-    <video class="myvideos" id=vide01 controls>
+    <video class="myvideos" id=vide01 controls width="470">
         <source src="videos/video2.mp4" type="video/mp4">
     </video>
-    <video class="myvideos" id=vide02 controls>
+    <video class="myvideos" id=vide02 controls width="470">
         <source src="videos/video1.mp4" type="video/mp4">
     </video>
-    <video class="myvideos" id=vide03 controls>
+    <video class="myvideos" id=vide03 controls width="470">
         <source src="videos/video3.mp4" type="video/mp4">
     </video>
 </div>
-  <button class="mybutton">See More</button>
+<div class="portfoliobutton">
+    <button class="mybutton" id="see-more-btn">See More</button>
+</div>
+  <script src="script.js"></script>
 </body>
 </html>
