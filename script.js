@@ -2,7 +2,7 @@ function goToPage() {
     window.location.href = "Contact.html";
 }
 function backToPage(){
-window.location.href = "Home.html";
+window.location.href = "index.html";
 }
 
 var tablinks= document.getElementsByClassName("tab-links");
